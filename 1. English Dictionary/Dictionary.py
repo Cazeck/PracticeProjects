@@ -1,10 +1,3 @@
-"""
-Building program that takes a english word as input and the program will return
-the definition of the word in english
-
-Uses data.json which contains words and definitions of english words
-Stored kind of like a python dictionary and we will load the json as a dict
-"""
 import json
 import difflib                              # Library used to compare text
 from difflib import SequenceMatcher         # Checks the ratio that two strings are similar .00 -> 1.00
@@ -44,6 +37,3 @@ if type(output) == list:
         print(item)
 else:
     print(output)
-
-
-""" now we do the rest as a mySQL Application instead of from a caca json"""

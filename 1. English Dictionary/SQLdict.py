@@ -1,6 +1,6 @@
 """
-A simply version of Dictionary that pulls data from a SQL database instead of a
-json file.  Come back to this and implement features
+A simple version of Dictionary that pulls data from a SQL database instead of a
+json file.  Come back to this and implement features from Dictionary
 """
 
 import mysql.connector
