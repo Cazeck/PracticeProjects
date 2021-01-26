@@ -46,4 +46,6 @@ def update(id, title, author, year, isbn):
 
 connect()
 
+#print(search(author="John Smith"))
+
 
