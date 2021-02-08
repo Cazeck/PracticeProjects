@@ -1,5 +1,4 @@
 import pandas
-import xlrd
 from bokeh.plotting import figure, output_file, show
 
 df = pandas.read_excel("verlegenhuken.xlsx", sheet_name=0)
