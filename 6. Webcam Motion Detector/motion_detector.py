@@ -41,6 +41,9 @@ while True:
 
     status_list.append(status)
 
+    # For memory efficiency
+    status_list = status_list[-2:]
+
     # Record times when status changed
     if status_list[-1] == 1 and status_list[-2] == 0:
         times.append(datetime.now())
