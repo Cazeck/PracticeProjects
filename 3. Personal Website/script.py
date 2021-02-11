@@ -12,8 +12,8 @@ def plot():
     from bokeh.embed import components
     from bokeh.resources import CDN
 
-    start = datetime.datetime(2015, 11, 1)
-    end = datetime.datetime(2016, 3, 10)
+    start = datetime.datetime(2020, 12, 10)
+    end = datetime.datetime(2021, 2, 10)
 
     # Grabbing Stock data from Yahoo
     df = data.DataReader(name="GOOG", data_source="yahoo", start=start, end=end)
@@ -81,3 +81,6 @@ def about():
 
 if __name__ =="__main__":
     app.run(debug=True)
+
+
+# Deploying website to Heroku

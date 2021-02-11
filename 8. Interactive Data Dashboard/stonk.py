@@ -6,8 +6,8 @@ from bokeh.plotting import figure, show, output_file
 from bokeh.embed import components
 from bokeh.resources import CDN
 
-start = datetime.datetime(2015, 11, 1)
-end = datetime.datetime(2016, 3, 10)
+start = datetime.datetime(2020, 12, 10)
+end = datetime.datetime(2021, 2, 10)
 
 # Grabbing Stock data from Yahoo
 df = data.DataReader(name="GOOG", data_source="yahoo", start=start, end=end)
@@ -64,9 +64,7 @@ cdn_js = CDN.js_files
 
 # JavaScript code for chart
 print(script1)
-# HTML code for chart
-print(div1)
 
 # For outputting file locally
-#output_file("CS.html")
-#show(p)
+output_file("CS.html")
+show(p)
