@@ -3,6 +3,8 @@
 import datetime
 from pandas_datareader import data
 from bokeh.plotting import figure, show, output_file
+from bokeh.embed import components
+from bokeh.resources import CDN
 
 start = datetime.datetime(2015, 11, 1)
 end = datetime.datetime(2016, 3, 10)
@@ -56,5 +58,15 @@ p.rect(df.index[df.Status == "Increase"], df.Middle[df.Status == "Increase"], ho
 p.rect(df.index[df.Status == "Decrease"], df.Middle[df.Status == "Decrease"], hours_12,
        df.Height[df.Status == "Decrease"], fill_color="#FF3333", line_color="black")
 
-output_file("CS.html")
-show(p)
+script1, div1 = components(p)
+
+cdn_js = CDN.js_files
+
+# JavaScript code for chart
+print(script1)
+# HTML code for chart
+print(div1)
+
+# For outputting file locally
+#output_file("CS.html")
+#show(p)
