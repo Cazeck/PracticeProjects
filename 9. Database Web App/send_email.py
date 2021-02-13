@@ -1,14 +1,14 @@
 from email.mime.text import MIMEText
 import smtplib
 
-def send_email(email, height):
-    # Change these values before commiting
-    from_email = "caztestsender@gmail.com"
+def send_email(email, height, average_height, count):
+    # Change these values before committing
+    from_email = ""
     from_password = ""
     to_email = email
 
     subject = "Height data"
-    message= "Hey there, your height is <strong>%s</strong>" % height
+    message = "Hey there, your height is <strong>%s</strong>. Average height of all users is <strong>%s</strong> and that is calculated out of <strong>%s</strong> of people." % (height, average_height, count)
 
     msg = MIMEText(message, 'html')
     msg['Subject'] = subject
